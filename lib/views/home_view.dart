@@ -1,12 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
-import 'package:workout_fitness/common_widget/round_button.dart';
+import 'package:musclemate/views/workout/workout_view.dart';
+import 'package:musclemate/views/workout/workout_view_2.dart';
+import 'package:musclemate/widgets/exercises_row.dart';
+import 'package:musclemate/widgets/round_button.dart';
 
-import '../../common/color_extension.dart';
-import '../../common_widget/exercises_row.dart';
-import '../workout/workout_view.dart';
-import '../workout/workout_view_2.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
