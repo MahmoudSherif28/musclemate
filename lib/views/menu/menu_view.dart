@@ -316,7 +316,7 @@ class _MenuViewState extends State<MenuView> {
                             builder: (context) => const HomeView()));
                     break;
                   case "2":
-                     Navigator.push(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const WeightView()));
@@ -324,8 +324,8 @@ class _MenuViewState extends State<MenuView> {
                   case "3":
                     Scaffold.of(context).openDrawer();
                     break;
-                   case "5":
-                     Navigator.push(
+                  case "5":
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const MealPlanView2()));
@@ -336,25 +336,25 @@ class _MenuViewState extends State<MenuView> {
                         MaterialPageRoute(
                             builder: (context) => const ScheduleView()));
                     break;
-                    case "7":
+                  case "7":
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const RunningView()));
                     break;
-                   case "8":
+                  case "8":
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const ExerciseView2()));
                     break;
-                   case "9":
-                  Navigator.push(
+                  case "9":
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const TipsView()));
                     break;
-                    case "10":
+                  case "10":
                     Navigator.push(
                         context,
                         MaterialPageRoute(

@@ -6,7 +6,6 @@ import 'package:musclemate/views/workout/workout_view_2.dart';
 import 'package:musclemate/widgets/exercises_row.dart';
 import 'package:musclemate/widgets/round_button.dart';
 
-
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
