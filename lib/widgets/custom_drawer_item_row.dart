@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
+import 'package:musclemate/models/drawer_items_model.dart';
 
-
-class PlanRow extends StatelessWidget {
-  final Map mObj;
+class CustomDrawerItemsRow extends StatelessWidget {
+  final DrawerItemsModel drawerItemsModel;
   final bool isSelect;
   final VoidCallback onPressed;
-  const PlanRow({super.key, required this.mObj, this.isSelect = false, required this.onPressed});
+  const CustomDrawerItemsRow(
+      {super.key,
+      required this.drawerItemsModel,
+      this.isSelect = false,
+      required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class PlanRow extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(
-              isSelect ? "assets/img/active.png" : mObj["icon"],
+              drawerItemsModel.icon,
               width: 35,
               height: 35,
             ),
@@ -26,24 +30,22 @@ class PlanRow extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                mObj["name"],
+                drawerItemsModel.name,
                 style: TextStyle(
-                    color: isSelect  ? TColor.primary : TColor.secondaryText,
+                    color: isSelect ? TColor.primary : TColor.secondaryText,
                     fontSize: 18,
                     fontWeight: FontWeight.w700),
               ),
             ),
-      
-            if(mObj["right_icon"] != "" )
-             Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 25),
-               child: Image.asset(
-                mObj["right_icon"],
-                width: 25,
-                height: 25,
-                     ),
-             ),
-      
+            if (drawerItemsModel.rightIcon != "")
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Image.asset(
+                  drawerItemsModel.rightIcon!,
+                  width: 25,
+                  height: 25,
+                ),
+              ),
           ],
         ),
       ),
