@@ -3,18 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:musclemate/helpers/color_extension.dart';
-import 'package:musclemate/views/home_view.dart';
-import 'package:musclemate/views/menu/yoga_view.dart';
-import 'package:musclemate/views/settings/setting_view.dart';
+import 'package:musclemate/helpers/menu_tap_fun.dart';
+import 'package:musclemate/models/menu_cells_model.dart';
 import 'package:musclemate/widgets/custom_drawer.dart';
-import 'package:musclemate/widgets/menu_cell.dart';
-import 'package:musclemate/widgets/custom_drawer_item_row.dart';
-import '../exercise/exercise_view_2.dart';
-import '../meal_plan/meal_plan_view_2.dart';
-import '../running/running_view.dart';
-import '../schedule/schedule_view.dart';
-import '../tips/tips_view.dart';
-import '../weight/weight_view.dart';
+import 'package:musclemate/widgets/custom_menu_cell.dart';
 
 class MenuView extends StatefulWidget {
   const MenuView({super.key});
@@ -24,26 +16,30 @@ class MenuView extends StatefulWidget {
 }
 
 class _MenuViewState extends State<MenuView> {
-  List menuArr = [
-    {"name": "Home", "image": "assets/img/menu_home.png", "tag": "1"},
-    {"name": "Weight", "image": "assets/img/menu_weight.png", "tag": "2"},
-    {
-      "name": "Traning plan",
-      "image": "assets/img/menu_traning_plan.png",
-      "tag": "3"
-    },
-    {
-      "name": "Training Status",
-      "image": "assets/img/menu_traning_status.png",
-      "tag": "4"
-    },
-    {"name": "Meal Plan", "image": "assets/img/menu_meal_plan.png", "tag": "5"},
-    {"name": "Schedule", "image": "assets/img/menu_schedule.png", "tag": "6"},
-    {"name": "Running", "image": "assets/img/menu_running.png", "tag": "7"},
-    {"name": "Exercises", "image": "assets/img/menu_exercises.png", "tag": "8"},
-    {"name": "Tips", "image": "assets/img/menu_tips.png", "tag": "9"},
-    {"name": "Settings", "image": "assets/img/menu_settings.png", "tag": "10"},
-    {"name": "Support", "image": "assets/img/menu_support.png", "tag": "11"},
+  List<MenuCellsModel> menuArr = [
+    MenuCellsModel(name: "Home", image: "assets/img/menu_home.png", tag: "1"),
+    MenuCellsModel(
+        name: "Weight", image: "assets/img/menu_weight.png", tag: "2"),
+    MenuCellsModel(
+        name: "Traning plan",
+        image: "assets/img/menu_traning_plan.png",
+        tag: "3"),
+    // MenuCellsModel(
+    //     name: "Training Status",
+    //     image: "assets/img/menu_traning_status.png",
+    //     tag: "4"),
+    MenuCellsModel(
+        name: "Meal Plan", image: "assets/img/menu_meal_plan.png", tag: "5"),
+    MenuCellsModel(
+        name: "Schedule", image: "assets/img/menu_schedule.png", tag: "6"),
+    MenuCellsModel(
+        name: "Running", image: "assets/img/menu_running.png", tag: "7"),
+    MenuCellsModel(
+        name: "Exercises", image: "assets/img/menu_exercises.png", tag: "8"),
+    MenuCellsModel(
+        name: "Settings", image: "assets/img/menu_settings.png", tag: "9"),
+    MenuCellsModel(
+        name: "Support", image: "assets/img/menu_support.png", tag: "10"),
   ];
 
   @override
@@ -144,64 +140,10 @@ class _MenuViewState extends State<MenuView> {
               childAspectRatio: 1),
           itemCount: menuArr.length,
           itemBuilder: ((context, index) {
-            var mObj = menuArr[index] as Map? ?? {};
-            return MenuCell(
-              mObj: mObj,
+            return CustomMenuCell(
+              menuCellsModel: menuArr[index],
               onPressed: () {
-                switch (mObj["tag"].toString()) {
-                  case "1":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomeView()));
-                    break;
-                  case "2":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const WeightView()));
-                    break;
-                  case "3":
-                    Scaffold.of(context).openDrawer();
-                    break;
-                  case "5":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MealPlanView2()));
-                    break;
-                  case "6":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ScheduleView()));
-                    break;
-                  case "7":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const RunningView()));
-                    break;
-                  case "8":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ExerciseView2()));
-                    break;
-                  case "9":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TipsView()));
-                    break;
-                  case "10":
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SettingsView()));
-                    break;
-                  default:
-                }
+                menuTapMethod(menuArr[index].tag, context);
               },
             );
           }),
