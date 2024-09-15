@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
+import 'package:musclemate/models/tips_model.dart';
 
 class TipRow extends StatelessWidget {
-  final Map tObj;
+  final TipsModel tipsModel;
   final VoidCallback onPressed;
   final bool isActive;
-  const TipRow({super.key, required this.tObj, required this.isActive , required this.onPressed});
+  const TipRow(
+      {super.key,
+      required this.tipsModel,
+      required this.isActive,
+      required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +22,7 @@ class TipRow extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              tObj["name"],
+              tipsModel.name,
               style: TextStyle(
                   color: isActive ? TColor.primary : TColor.secondaryText,
                   fontSize: 18,

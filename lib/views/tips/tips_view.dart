@@ -1,27 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
+import 'package:musclemate/helpers/tips_list.dart';
 import 'package:musclemate/views/tips/tips_details_view.dart';
 import 'package:musclemate/widgets/tip_row.dart';
 
-class TipsView extends StatefulWidget {
+class TipsView extends StatelessWidget {
   const TipsView({super.key});
-
-  @override
-  State<TipsView> createState() => _TipsViewState();
-}
-
-class _TipsViewState extends State<TipsView> {
-  List tipsArr = [
-    {"name": "About Traning"},
-    {"name": "How to weight loss ?"},
-    {"name": "Introducing about meal plan "},
-    {"name": "Water and Food"},
-    {"name": "Drink water"},
-    {"name": "How many times a day to eat"},
-    {"name": "Become stronger"},
-    {"name": "Shoes To Training"},
-    {"name": "Appeal Tips"}
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -49,17 +33,18 @@ class _TipsViewState extends State<TipsView> {
       body: ListView.separated(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           itemBuilder: (context, index) {
-            var tObj = tipsArr[index] as Map? ?? {};
             return TipRow(
-              tObj: tObj,
+              tipsModel: tipsDatails[index],
               isActive: index == 0,
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => TipsDetailView(
-                              tObj: tObj,
-                            )));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TipsDetailView(
+                      tipsModel: tipsDatails[index],
+                    ),
+                  ),
+                );
               },
             );
           },
@@ -69,43 +54,7 @@ class _TipsViewState extends State<TipsView> {
               height: 1,
             );
           },
-          itemCount: tipsArr.length),
-      bottomNavigationBar: BottomAppBar(
-        elevation: 1,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 15),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              InkWell(
-                onTap: () {},
-                child: Image.asset("assets/img/menu_running.png",
-                    width: 25, height: 25),
-              ),
-              InkWell(
-                onTap: () {},
-                child: Image.asset("assets/img/menu_meal_plan.png",
-                    width: 25, height: 25),
-              ),
-              InkWell(
-                onTap: () {},
-                child: Image.asset("assets/img/menu_home.png",
-                    width: 25, height: 25),
-              ),
-              InkWell(
-                onTap: () {},
-                child: Image.asset("assets/img/menu_weight.png",
-                    width: 25, height: 25),
-              ),
-              InkWell(
-                onTap: () {},
-                child:
-                    Image.asset("assets/img/more.png", width: 25, height: 25),
-              ),
-            ],
-          ),
-        ),
-      ),
+          itemCount: tipsDatails.length),
     );
   }
 }

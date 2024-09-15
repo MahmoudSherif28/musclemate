@@ -65,6 +65,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/img/
+    - assets/img/new/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -78,18 +79,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Quicksand-Bold
+    - family: nerko
       fonts:
-        - asset: assets/font/Quicksand-Bold.ttf
-    - family: Quicksand-Light
-      fonts:
-        - asset: assets/font/Quicksand-Light.ttf
-    - family: Quicksand-Medium
-      fonts:
-        - asset: assets\font\Quicksand-Medium.ttf
-    - family: Quicksand-Regular
-      fonts:
-        - asset: assets\font\Quicksand-Regular.ttf
+        - asset: assets/font/NerkoOne-Regular.ttf
+   
 
   #   - family: Trajan Pro
   #     fonts:

@@ -7,7 +7,6 @@ import 'package:musclemate/views/schedule/schedule_view.dart';
 import 'package:musclemate/views/settings/setting_view.dart';
 import 'package:musclemate/views/tips/tips_view.dart';
 import 'package:musclemate/views/weight/weight_view.dart';
-import 'package:musclemate/views/workout/workout_view.dart';
 
 void menuTapMethod(String tag, BuildContext context) {
   switch (tag) {

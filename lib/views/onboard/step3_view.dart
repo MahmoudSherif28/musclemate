@@ -178,23 +178,24 @@ class _Step3ViewState extends State<Step3View> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.w700),
                           ),
-                          
                           CupertinoSegmentedControl(
-                              groupValue: isMale,
-                              selectedColor: TColor.primary,
-                              unselectedColor: TColor.white,
-                              borderColor: TColor.primary,
-                              children: const {
-                                true: Text(" Male ",
-                                    style: TextStyle(fontSize: 18)),
-                                false: Text(" Female ",
-                                    style: TextStyle(fontSize: 18))
-                              },
-                              onValueChanged: (isMaleVal) {
-                                setState(() {
-                                  isMale = isMaleVal;
-                                });
-                              }, padding: EdgeInsets.zero, )
+                            groupValue: isMale,
+                            selectedColor: TColor.primary,
+                            unselectedColor: TColor.white,
+                            borderColor: TColor.primary,
+                            children: const {
+                              true: Text(" Male ",
+                                  style: TextStyle(fontSize: 18)),
+                              false: Text(" Female ",
+                                  style: TextStyle(fontSize: 18))
+                            },
+                            onValueChanged: (isMaleVal) {
+                              setState(() {
+                                isMale = isMaleVal;
+                              });
+                            },
+                            padding: EdgeInsets.zero,
+                          )
                         ],
                       ),
                     )
@@ -208,7 +209,11 @@ class _Step3ViewState extends State<Step3View> {
                 child: RoundButton(
                   title: "Start",
                   onPressed: () {
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const MenuView() ) , (route) => false);
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MenuView()),
+                        (route) => false);
                   },
                 ),
               ),

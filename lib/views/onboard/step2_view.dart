@@ -72,7 +72,6 @@ class _Step2ViewState extends State<Step2View> {
                   });
                 },
               ),
-
               FitnessLevelSelector(
                 title: "Advanced",
                 subtitle: "You're fit and ready for an intensive workout plan",
@@ -83,8 +82,6 @@ class _Step2ViewState extends State<Step2View> {
                   });
                 },
               ),
-              
-              
               const Spacer(),
               Padding(
                 padding:
@@ -92,7 +89,10 @@ class _Step2ViewState extends State<Step2View> {
                 child: RoundButton(
                   title: "Next",
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Step3View() ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Step3View()));
                   },
                 ),
               ),
