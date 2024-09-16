@@ -1,8 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../menu/menu_view.dart';
-
+import 'onboarding.dart';
+import 'package:page_transition/page_transition.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -31,12 +30,14 @@ class _splashState extends State<splash> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedSplashScreen(
-        backgroundColor: Color(0xffF7A26D),
+        duration:3,
+        pageTransitionType:PageTransitionType.rightToLeft,
+        backgroundColor: Color(0xffae6a46),
         splashIconSize: 250,
         splash: CircleAvatar(
             radius: 90,
-            backgroundImage: AssetImage("assets/new/splash.jpg")),
-        nextScreen: MenuView(),
+            backgroundImage: AssetImage("assets/img/new/splash.jpg")),
+        nextScreen: FirstOnBoarding(),
       ),
     );
   }
