@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:musclemate/views/login/login.dart';
 
 import '../menu/menu_view.dart';
 
@@ -189,7 +190,7 @@ class _FirstOnBoardingState extends State<FirstOnBoarding> {
                 child: InkWell(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const MenuView()));
+                        builder: (context) => const Login()));
                   },
                   child: Container(
                     width: double.infinity,
