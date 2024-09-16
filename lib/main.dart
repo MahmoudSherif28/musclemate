@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
 import 'package:musclemate/views/menu/menu_view.dart';
+import 'package:musclemate/views/onboard/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: TColor.kPrimaryColor),
         useMaterial3: false,
       ),
-      home: const MenuView(),
+      home: const splash(),
     );
   }
 }
