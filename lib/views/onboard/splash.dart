@@ -35,7 +35,7 @@ class _splashState extends State<splash> {
         splashIconSize: 250,
         splash: CircleAvatar(
             radius: 90,
-            backgroundImage: AssetImage("assets/splash.jpg")),
+            backgroundImage: AssetImage("assets/new/splash.jpg")),
         nextScreen: MenuView(),
       ),
     );
