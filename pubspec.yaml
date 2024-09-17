@@ -40,8 +40,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   flutter_calendar_carousel: ^2.4.4
   simple_circular_progress_bar: ^1.0.2
-  chat_gpt_sdk:
-  dash_chat_2:
+
 
 dev_dependencies:
   flutter_test:
