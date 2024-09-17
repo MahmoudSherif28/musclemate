@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:musclemate/helpers/color_extension.dart';
 import 'package:musclemate/helpers/menu_tap_fun.dart';
 import 'package:musclemate/models/menu_cells_model.dart';
-import 'package:musclemate/views/chatbot/chat.dart';
 import 'package:musclemate/views/chatbot/chat_screen.dart';
 import 'package:musclemate/views/settings/setting_view.dart';
 import 'package:musclemate/views/weight/weight_view.dart';
@@ -137,7 +136,7 @@ class _MenuViewState extends State<MenuView> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(25),
                                 child: Image.asset(
-                                  "assets/img/u1.png",
+                                  "assets/img/new/mo.jpg",
                                   width: 50,
                                   height: 50,
                                   fit: BoxFit.cover,
@@ -151,7 +150,7 @@ class _MenuViewState extends State<MenuView> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text("Code For Any",
+                                Text("Mohamed Hussien",
                                     style: TextStyle(
                                       fontSize: 25,
                                       color: TColor.white,
@@ -160,7 +159,7 @@ class _MenuViewState extends State<MenuView> {
                                 const SizedBox(
                                   height: 4,
                                 ),
-                                Text("Profile",
+                                Text("Mobile App Developer",
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: TColor.white,
