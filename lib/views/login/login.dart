@@ -25,7 +25,8 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+        body: ListView(children: [
+      SafeArea(
         child: Padding(
           padding: EdgeInsets.all(8.0.w),
           child: Center(
@@ -38,23 +39,24 @@ class _LoginState extends State<Login> {
                   Text(
                     "LOGIN",
                     style: TextStyle(
-                        color: Color(0xff442712),
+                        color: const Color(0xff442712),
                         fontWeight: FontWeight.bold,
                         fontSize: 45.sp),
                   ),
                   SizedBox(height: 40.h),
                   Text(
                     "Hey!, Enter your details to sign in to your account",
-                    style: TextStyle(color: Color(0xff442712), fontSize: 13.sp),
+                    style: TextStyle(
+                        color: const Color(0xff442712), fontSize: 13.sp),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 80.h),
-                  Container(
+                  SizedBox(
                     width: 350.w,
                     height: 60.h,
                     child: TextFormField(
                       controller: _emailController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Email or Username',
                         hintText: 'Enter your email or username',
                         border: OutlineInputBorder(),
@@ -69,7 +71,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   SizedBox(height: 40.h),
-                  Container(
+                  SizedBox(
                     width: 350.w,
                     height: 60.h,
                     child: TextFormField(
@@ -81,13 +83,13 @@ class _LoginState extends State<Login> {
                             _obscurePassword
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: Color(0xff442712),
+                            color: const Color(0xff442712),
                           ),
                           onPressed: _togglePasswordVisibility,
                         ),
                         labelText: 'Password',
                         hintText: 'Enter your password',
-                        border: OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -109,14 +111,15 @@ class _LoginState extends State<Login> {
                       if (_formKey.currentState?.validate() ?? false) {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const MenuView()),
+                          MaterialPageRoute(
+                              builder: (context) => const MenuView()),
                         );
                       }
                     },
-                    child: Text("Login"),
+                    child: const Text("Login"),
                   ),
                   SizedBox(height: 40.h),
-                  Text(
+                  const Text(
                     "... or sign in with ...",
                     style: TextStyle(color: Color(0xff442712)),
                   ),
@@ -149,30 +152,28 @@ class _LoginState extends State<Login> {
                       ),
                     ],
                   ),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Don't have an account? "),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const RegistrationPage(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            "Register now",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15.sp,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Don't have an account? "),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const RegistrationPage(),
                             ),
+                          );
+                        },
+                        child: Text(
+                          "Register now",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15.sp,
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -180,6 +181,6 @@ class _LoginState extends State<Login> {
           ),
         ),
       ),
-    );
+    ]));
   }
 }

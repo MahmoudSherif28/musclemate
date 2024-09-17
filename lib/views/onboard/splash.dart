@@ -2,6 +2,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'onboarding.dart';
 import 'package:page_transition/page_transition.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const splash(),
+    return const MaterialApp(
+      home: splash(),
     );
   }
 }
@@ -30,14 +31,14 @@ class _splashState extends State<splash> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedSplashScreen(
-        duration:3,
-        pageTransitionType:PageTransitionType.rightToLeft,
-        backgroundColor: Color(0xffae6a46),
+        duration: 3,
+        pageTransitionType: PageTransitionType.rightToLeft,
+        backgroundColor: const Color(0xffae6a46),
         splashIconSize: 250,
-        splash: CircleAvatar(
+        splash: const CircleAvatar(
             radius: 90,
             backgroundImage: AssetImage("assets/img/new/splash.jpg")),
-        nextScreen: FirstOnBoarding(),
+        nextScreen: const FirstOnBoarding(),
       ),
     );
   }
