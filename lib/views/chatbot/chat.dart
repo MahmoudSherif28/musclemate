@@ -15,7 +15,7 @@ class _ChatPageState extends State<ChatPage> {
   final _bot = ChatUser(id: '2', firstName: 'Bot');
   List<ChatMessage> messages = [];
   final _chatGpt = OpenAI.instance.build(
-      token: OPENAI_API_KEY,
+      token: '',
       baseOption: HttpSetup(receiveTimeout: const Duration(seconds: 5)));
   @override
   Widget build(BuildContext context) {
