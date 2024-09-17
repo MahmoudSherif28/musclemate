@@ -3,7 +3,6 @@ import 'package:musclemate/helpers/color_extension.dart';
 import 'package:musclemate/widgets/response_row.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-
 class WorkoutDetailView extends StatefulWidget {
   const WorkoutDetailView({super.key});
 
@@ -57,7 +56,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0.1,
         leading: IconButton(
@@ -112,7 +111,7 @@ class _WorkoutDetailViewState extends State<WorkoutDetailView> {
                       itemPadding: const EdgeInsets.symmetric(horizontal: 1.0),
                       itemBuilder: (context, _) => Icon(
                         Icons.star,
-                        color: TColor.primary,
+                        color: TColor.kPrimaryColor,
                       ),
                       onRatingUpdate: (rating) {
                         print(rating);

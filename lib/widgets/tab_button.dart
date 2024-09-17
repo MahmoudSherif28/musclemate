@@ -22,13 +22,13 @@ class TabButton extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                  color: isActive ? TColor.primary : TColor.secondaryText,
+                  color: isActive ? TColor.kPrimaryColor : TColor.secondaryText,
                   fontSize: 16,
                   fontWeight: FontWeight.w700),
             ),
           ),
           Container(
-            color: isActive ? TColor.primary : Colors.transparent,
+            color: isActive ? TColor.kPrimaryColor : Colors.transparent,
             height: 2,
           )
         ],
@@ -54,7 +54,8 @@ class TabButton2 extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 8),
         decoration: BoxDecoration(
-            color: isActive ? TColor.primary : Colors.grey.withOpacity(0.1),
+            color:
+                isActive ? TColor.kPrimaryColor : Colors.grey.withOpacity(0.1),
             borderRadius: BorderRadius.circular(10)),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),

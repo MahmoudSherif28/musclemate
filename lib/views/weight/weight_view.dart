@@ -26,7 +26,7 @@ class _WeightViewState extends State<WeightView> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: TColor.primary,
+          backgroundColor: TColor.kPrimaryColor,
           centerTitle: true,
           elevation: 0.1,
           // leading: IconButton(
@@ -167,7 +167,7 @@ class _WeightViewState extends State<WeightView> {
                   "74 kg",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: TColor.primary,
+                      color: TColor.kPrimaryColor,
                       fontSize: 24,
                       fontWeight: FontWeight.w700),
                 ),

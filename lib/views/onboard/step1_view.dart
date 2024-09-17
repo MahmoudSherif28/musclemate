@@ -21,7 +21,7 @@ class _Step1ViewState extends State<Step1View> {
           title: Text(
             "Step 1 of 3",
             style: TextStyle(
-                color: TColor.primary,
+                color: TColor.kPrimaryColor,
                 fontSize: 20,
                 fontWeight: FontWeight.w700),
           ),
@@ -78,7 +78,7 @@ class _Step1ViewState extends State<Step1View> {
                     height: 12,
                     decoration: BoxDecoration(
                         color: 1 == pObj
-                            ? TColor.primary
+                            ? TColor.kPrimaryColor
                             : TColor.gray.withOpacity(0.7),
                         borderRadius: BorderRadius.circular(6)),
                   );

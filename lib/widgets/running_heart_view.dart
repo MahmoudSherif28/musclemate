@@ -99,7 +99,7 @@ class _RunningHeartViewState extends State<RunningHeartView> {
                     mergeMode: true,
                     animationDuration: 1,
                     backColor: const Color(0xffE6E6E6),
-                    progressColors: [TColor.primary],
+                    progressColors: [TColor.kPrimaryColor],
                     progressStrokeWidth: 15,
                     backStrokeWidth: 15,
                     startAngle: 0,
@@ -146,7 +146,7 @@ class _RunningHeartViewState extends State<RunningHeartView> {
                         height: (val * 70) / 150,
                         decoration: BoxDecoration(
                             color: index > 12 && index < 18
-                                ? TColor.primary
+                                ? TColor.kPrimaryColor
                                 : const Color(0xffE6E6E6),
                             borderRadius: BorderRadius.circular(2)),
                       );

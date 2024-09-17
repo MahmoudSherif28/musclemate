@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Quicksand",
-        colorScheme: ColorScheme.fromSeed(seedColor: TColor.primary),
+        colorScheme: ColorScheme.fromSeed(seedColor: TColor.kPrimaryColor),
         useMaterial3: false,
       ),
       home: const MenuView(),

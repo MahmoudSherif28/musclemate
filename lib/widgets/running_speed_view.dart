@@ -62,7 +62,7 @@ class _RunningSpeedViewState extends State<RunningSpeedView> {
                     mergeMode: true,
                     animationDuration: 1,
                     backColor: const Color(0xffE6E6E6),
-                    progressColors: [TColor.primary],
+                    progressColors: [TColor.kPrimaryColor],
                     progressStrokeWidth: 15,
                     backStrokeWidth: 15,
                     startAngle: 0,
@@ -133,7 +133,7 @@ class _RunningSpeedViewState extends State<RunningSpeedView> {
                         height: 40,
                         decoration: BoxDecoration(
                           color: valObj == 10
-                              ? TColor.primary
+                              ? TColor.kPrimaryColor
                               : const Color(0xffE6E6E6),
                         ),
                       );

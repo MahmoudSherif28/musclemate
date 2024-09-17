@@ -12,8 +12,16 @@ class MealPlanView2 extends StatefulWidget {
 class _MealPlanView2State extends State<MealPlanView2> {
   int isActiveTab = 0;
   List workArr = [
-    {"name": "Breafast", "title":"vegetable, Sandwich", "image": "assets/img/f1.png"},
-    {"name": "Snack", "title": "Boat, nut, butter", "image": "assets/img/f2.png"},
+    {
+      "name": "Breafast",
+      "title": "vegetable, Sandwich",
+      "image": "assets/img/f1.png"
+    },
+    {
+      "name": "Snack",
+      "title": "Boat, nut, butter",
+      "image": "assets/img/f2.png"
+    },
     {
       "name": "Breafast",
       "title": "vegetable, Sandwich",
@@ -21,7 +29,7 @@ class _MealPlanView2State extends State<MealPlanView2> {
     },
     {
       "name": "Snack",
-       "title": "Boat, nut, butter",
+      "title": "Boat, nut, butter",
       "image": "assets/img/f4.png",
     },
   ];
@@ -31,7 +39,7 @@ class _MealPlanView2State extends State<MealPlanView2> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
@@ -58,7 +66,6 @@ class _MealPlanView2State extends State<MealPlanView2> {
           child: Row(
             children: [
               Expanded(
-               
                 child: TabButton2(
                   title: "Water",
                   isActive: isActiveTab == 0,
@@ -70,7 +77,6 @@ class _MealPlanView2State extends State<MealPlanView2> {
                 ),
               ),
               Expanded(
-                
                 child: TabButton2(
                   title: "Food",
                   isActive: isActiveTab == 1,
@@ -81,7 +87,6 @@ class _MealPlanView2State extends State<MealPlanView2> {
                   },
                 ),
               ),
-             
             ],
           ),
         ),
@@ -118,7 +123,6 @@ class _MealPlanView2State extends State<MealPlanView2> {
             ],
           ),
         ),
-
         Expanded(
           child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
@@ -131,7 +135,6 @@ class _MealPlanView2State extends State<MealPlanView2> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                     
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset(
@@ -141,23 +144,18 @@ class _MealPlanView2State extends State<MealPlanView2> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                          
-                       
-                       Text(
+                      Text(
                         wObj["name"],
                         style: TextStyle(
                             color: TColor.secondaryText,
                             fontSize: 20,
                             fontWeight: FontWeight.w700),
                       ),
-
                       Text(
                         wObj["title"],
                         style: TextStyle(
-                            color: TColor.secondaryText,
-                            fontSize: 14),
+                            color: TColor.secondaryText, fontSize: 14),
                       ),
-                      
                     ],
                   ),
                 );

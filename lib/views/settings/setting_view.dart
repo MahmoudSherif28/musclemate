@@ -29,7 +29,7 @@ class _SettingsViewState extends State<SettingsView> {
     MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0.1,
         leading: IconButton(
@@ -63,14 +63,14 @@ class _SettingsViewState extends State<SettingsView> {
               return SettingSelectRow(
                   tObj: tObj,
                   onPressed: () {
-                    if (tObj["name" ] == "Language") {
+                    if (tObj["name"] == "Language") {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
                                   SelectLanguageView(didSelect: (newVal) {})));
-                    }else{
-                       Navigator.push(
+                    } else {
+                      Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>

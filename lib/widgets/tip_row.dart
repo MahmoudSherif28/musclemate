@@ -24,7 +24,7 @@ class TipRow extends StatelessWidget {
             Text(
               tipsModel.name,
               style: TextStyle(
-                  color: isActive ? TColor.primary : TColor.secondaryText,
+                  color: isActive ? TColor.kPrimaryColor : TColor.secondaryText,
                   fontSize: 18,
                   fontWeight: FontWeight.w700),
             ),
@@ -32,7 +32,7 @@ class TipRow extends StatelessWidget {
               "assets/img/next.png",
               width: 25,
               height: 25,
-              color: isActive ? TColor.primary : TColor.secondaryText,
+              color: isActive ? TColor.kPrimaryColor : TColor.secondaryText,
             )
           ],
         ),

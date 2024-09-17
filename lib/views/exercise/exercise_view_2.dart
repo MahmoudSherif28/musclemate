@@ -30,7 +30,7 @@ class _ExerciseView2State extends State<ExerciseView2> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
@@ -57,7 +57,7 @@ class _ExerciseView2State extends State<ExerciseView2> {
           child: Row(
             children: [
               Expanded(
-                flex:3,
+                flex: 3,
                 child: TabButton2(
                   title: "Full Body",
                   isActive: isActiveTab == 0,
@@ -69,7 +69,7 @@ class _ExerciseView2State extends State<ExerciseView2> {
                 ),
               ),
               Expanded(
-                 flex: 2,
+                flex: 2,
                 child: TabButton2(
                   title: "Foot",
                   isActive: isActiveTab == 1,

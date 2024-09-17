@@ -22,7 +22,7 @@ class BorderButton extends StatelessWidget {
         decoration: BoxDecoration(
             border: Border.all(
                 color: type == BorderButtonType.active
-                    ? TColor.primary
+                    ? TColor.kPrimaryColor
                     : TColor.gray.withOpacity(0.5),
                 width: 1),
             borderRadius: BorderRadius.circular(5)),
@@ -31,7 +31,7 @@ class BorderButton extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
               color: type == BorderButtonType.active
-                  ? TColor.primary
+                  ? TColor.kPrimaryColor
                   : TColor.secondaryText,
               fontSize: 20,
               fontWeight: type == BorderButtonType.active

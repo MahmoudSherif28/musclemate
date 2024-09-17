@@ -69,34 +69,34 @@ class _ExerciseViewState extends State<ExerciseView> {
       body: Column(
         children: [
           Container(
-            decoration: BoxDecoration(
-              color: TColor.white,
-              boxShadow: const  [
-                BoxShadow(
-                  color: Colors.black26,
-                  blurRadius: 4,
-                  offset: Offset(0, 2)
-
-                )
-              ]
-            ),
+            decoration: BoxDecoration(color: TColor.white, boxShadow: const [
+              BoxShadow(
+                  color: Colors.black26, blurRadius: 4, offset: Offset(0, 2))
+            ]),
             child: Row(
               children: [
                 Expanded(
-                  child: TabButton(title: "Full Body", isActive: isActiveTab == 0, onPressed: (){
-                    setState(() {
-                      isActiveTab = 0;
-                    });
-                  }, ),
+                  child: TabButton(
+                    title: "Full Body",
+                    isActive: isActiveTab == 0,
+                    onPressed: () {
+                      setState(() {
+                        isActiveTab = 0;
+                      });
+                    },
+                  ),
                 ),
-                 Expanded(
-                  child: TabButton(title: "Foot", isActive: isActiveTab == 1, onPressed: (){
-                    setState(() {
-                      isActiveTab = 1;
-                    });
-                  }, ),
+                Expanded(
+                  child: TabButton(
+                    title: "Foot",
+                    isActive: isActiveTab == 1,
+                    onPressed: () {
+                      setState(() {
+                        isActiveTab = 1;
+                      });
+                    },
+                  ),
                 ),
-          
                 Expanded(
                   child: TabButton(
                     title: "Arm",
@@ -119,8 +119,6 @@ class _ExerciseViewState extends State<ExerciseView> {
                     },
                   ),
                 ),
-               
-                
               ],
             ),
           ),
@@ -164,7 +162,7 @@ class _ExerciseViewState extends State<ExerciseView> {
                               Text(
                                 wObj["title"],
                                 style: TextStyle(
-                                    color: TColor.primary,
+                                    color: TColor.kPrimaryColor,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500),
                               ),

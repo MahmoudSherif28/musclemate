@@ -4,7 +4,7 @@ import 'package:musclemate/widgets/language_row.dart';
 
 class SelectLanguageView extends StatefulWidget {
   final Function(Map) didSelect;
-  const SelectLanguageView({super.key, required this.didSelect });
+  const SelectLanguageView({super.key, required this.didSelect});
 
   @override
   State<SelectLanguageView> createState() => _SelectLanguageViewState();
@@ -13,14 +13,30 @@ class SelectLanguageView extends StatefulWidget {
 class _SelectLanguageViewState extends State<SelectLanguageView> {
   int selectIndex = 0;
   List langArr = [
-    {"name": "English", },
-    {"name": "Spanish", },
-    {"name": "Hindi", },
-    {"name": "Arabic",},
-    {"name": "Portuguese", },
-    {"name": "Bengali",},
-    {"name": "Russian",},
-    {"name": "Vietnamese",}
+    {
+      "name": "English",
+    },
+    {
+      "name": "Spanish",
+    },
+    {
+      "name": "Hindi",
+    },
+    {
+      "name": "Arabic",
+    },
+    {
+      "name": "Portuguese",
+    },
+    {
+      "name": "Bengali",
+    },
+    {
+      "name": "Russian",
+    },
+    {
+      "name": "Vietnamese",
+    }
   ];
 
   @override
@@ -28,7 +44,7 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
     MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0.1,
         leading: IconButton(
@@ -52,12 +68,14 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
             var tObj = langArr[index] as Map? ?? {};
 
             return LanguageRow(
-                tObj: tObj,
-                isActive: selectIndex == index  , onPressed: (){
-                  setState(() {
-                    selectIndex = index;
-                  });
-                },);
+              tObj: tObj,
+              isActive: selectIndex == index,
+              onPressed: () {
+                setState(() {
+                  selectIndex = index;
+                });
+              },
+            );
           },
           separatorBuilder: (context, index) {
             return const Divider(
@@ -66,7 +84,6 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
             );
           },
           itemCount: langArr.length),
-      
     );
   }
 }
