@@ -6,6 +6,7 @@ import 'package:musclemate/helpers/color_extension.dart';
 import 'package:musclemate/helpers/menu_tap_fun.dart';
 import 'package:musclemate/models/menu_cells_model.dart';
 import 'package:musclemate/views/chatbot/chat.dart';
+import 'package:musclemate/views/chatbot/chat_screen.dart';
 import 'package:musclemate/views/settings/setting_view.dart';
 import 'package:musclemate/views/weight/weight_view.dart';
 import 'package:musclemate/widgets/custom_drawer.dart';
@@ -32,7 +33,7 @@ class _MenuViewState extends State<MenuView> {
       case 1:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const ChatPage()),
+          MaterialPageRoute(builder: (context) => ChatScreen()),
         );
         break;
       case 1:

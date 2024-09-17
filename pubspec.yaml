@@ -42,6 +42,10 @@ dependencies:
   simple_circular_progress_bar: ^1.0.2
   animated_splash_screen:
   flutter_screenutil:
+  chat_gpt_sdk: 
+  dash_chat_2: 
+  flutter_gemini: 
+  image_picker: 
 
 
 dev_dependencies:
@@ -93,7 +97,9 @@ flutter:
     - family: nerko
       fonts:
         - asset: assets/font/NerkoOne-Regular.ttf
-   
+    - family: Pacifico
+      fonts:
+        - asset: assets/font/Pacifico-Regular.ttf
 
   #   - family: Trajan Pro
   #     fonts:
