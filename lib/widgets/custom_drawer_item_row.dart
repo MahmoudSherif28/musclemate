@@ -32,7 +32,8 @@ class CustomDrawerItemsRow extends StatelessWidget {
               child: Text(
                 drawerItemsModel.name,
                 style: TextStyle(
-                    color: isSelect ? TColor.primary : TColor.secondaryText,
+                    color:
+                        isSelect ? TColor.kPrimaryColor : TColor.secondaryText,
                     fontSize: 18,
                     fontWeight: FontWeight.w700),
               ),

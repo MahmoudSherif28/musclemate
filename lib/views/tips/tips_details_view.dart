@@ -10,7 +10,7 @@ class TipsDetailView extends StatelessWidget {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0.1,
         title: Text(

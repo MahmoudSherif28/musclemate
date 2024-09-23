@@ -54,7 +54,7 @@ class _RunningLengthViewState extends State<RunningLengthView> {
                     mergeMode: true,
                     animationDuration: 1,
                     backColor: const Color(0xffE6E6E6),
-                    progressColors: [TColor.primary],
+                    progressColors: [TColor.kPrimaryColor],
                     progressStrokeWidth: 15,
                     backStrokeWidth: 15,
                     startAngle: 0,
@@ -93,7 +93,7 @@ class _RunningLengthViewState extends State<RunningLengthView> {
                 Container(
                   width: double.maxFinite,
                   alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.only(left: media.width * 0.9 * 0.7 ),
+                  padding: EdgeInsets.only(left: media.width * 0.9 * 0.7),
                   child: Image.asset(
                     "assets/img/r_location.png",
                     width: 25,

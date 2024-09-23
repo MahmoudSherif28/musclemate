@@ -22,7 +22,7 @@ class SettingSwitchRow extends StatelessWidget {
                 fontWeight: FontWeight.w700),
           ),
           CupertinoSwitch(
-              activeColor: TColor.primary,
+              activeColor: TColor.kPrimaryColor,
               value: tObj["value"] == "true",
               onChanged: onChanged)
         ],

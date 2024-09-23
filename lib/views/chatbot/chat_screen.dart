@@ -27,7 +27,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         title: const Text(
           "Let's Chat ",
           style: TextStyle(color: Colors.white, fontFamily: 'Pacifico'),
@@ -41,7 +41,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget _buildUi() {
     return DashChat(
         messageOptions: MessageOptions(
-          currentUserContainerColor: TColor.primary,
+          currentUserContainerColor: TColor.kPrimaryColor,
         ),
         inputOptions: InputOptions(
           trailing: [
@@ -51,7 +51,7 @@ class _ChatScreenState extends State<ChatScreen> {
               },
               icon: Icon(
                 Icons.image,
-                color: TColor.primary,
+                color: TColor.kPrimaryColor,
               ),
             )
           ],

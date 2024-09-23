@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/check_process.dart';
+import 'package:musclemate/helpers/color_extension.dart';
 import 'package:musclemate/views/menu/menu_view.dart';
 import 'package:musclemate/views/running/running_view.dart';
 import 'package:musclemate/views/settings/setting_view.dart';
@@ -51,7 +52,7 @@ class _WeightViewState extends State<WeightView> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.brown,
+          backgroundColor: TColor.kPrimaryColor,
           centerTitle: true,
           elevation: 0.1,
           title: Text(

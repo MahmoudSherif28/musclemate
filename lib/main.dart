@@ -24,10 +24,10 @@ class MyApp extends StatelessWidget {
           title: 'Workout Fitness',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: TColor.primary),
+            colorScheme: ColorScheme.fromSeed(seedColor: TColor.kPrimaryColor),
             useMaterial3: false,
           ),
-          home: const Splash(),
+          home: const SplashScreen(),
         );
       },
     );

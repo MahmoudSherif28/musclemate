@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musclemate/helpers/color_extension.dart';
 import 'dart:async'; // For Timer
 import 'package:video_player/video_player.dart';
 
@@ -94,7 +95,7 @@ class _Day1Ex2ViewState extends State<Day1Ex2View> {
       appBar: AppBar(
         title: const Text('Exercise 2'),
         centerTitle: true,
-        backgroundColor: Colors.brown,
+        backgroundColor: TColor.kPrimaryColor,
       ),
       backgroundColor: Colors.white,
       body: Center(

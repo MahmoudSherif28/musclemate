@@ -83,7 +83,7 @@ class SelectPicker extends StatelessWidget {
             ),
             Text(
               selectVal ?? "Select",
-              style: TextStyle(color: TColor.primary, fontSize: 18),
+              style: TextStyle(color: TColor.kPrimaryColor, fontSize: 18),
             ),
           ],
         ),

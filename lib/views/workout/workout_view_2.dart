@@ -28,7 +28,7 @@ class _WorkoutView2State extends State<WorkoutView2> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0.1,
         leading: IconButton(

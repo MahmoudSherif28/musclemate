@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
 
-
 class ExercisesRow extends StatelessWidget {
   final String number;
   final String title;
@@ -31,7 +30,7 @@ class ExercisesRow extends StatelessWidget {
               height: 30,
               decoration: BoxDecoration(
                 color: isActive
-                    ? TColor.primary.withOpacity(0.3)
+                    ? TColor.kPrimaryColor.withOpacity(0.3)
                     : TColor.gray.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -40,7 +39,7 @@ class ExercisesRow extends StatelessWidget {
                 width: 25,
                 height: 25,
                 decoration: BoxDecoration(
-                  color: isActive ? TColor.primary : TColor.gray,
+                  color: isActive ? TColor.kPrimaryColor : TColor.gray,
                   borderRadius: BorderRadius.circular(12.5),
                 ),
                 alignment: Alignment.center,

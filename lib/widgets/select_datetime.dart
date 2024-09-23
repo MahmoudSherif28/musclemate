@@ -75,7 +75,7 @@ class SelectDateTime extends StatelessWidget {
               selectDate == null
                   ? "Select Date"
                   : selectDate!.stringFormat(format: "MMM dd, yyyy"),
-              style: TextStyle(color: TColor.primary, fontSize: 18),
+              style: TextStyle(color: TColor.kPrimaryColor, fontSize: 18),
             ),
           ],
         ),

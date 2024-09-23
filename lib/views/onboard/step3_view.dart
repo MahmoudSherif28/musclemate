@@ -39,7 +39,7 @@ class _Step3ViewState extends State<Step3View> {
           title: Text(
             "Step 3 of 3",
             style: TextStyle(
-                color: TColor.primary,
+                color: TColor.kPrimaryColor,
                 fontSize: 20,
                 fontWeight: FontWeight.w700),
           ),
@@ -98,7 +98,7 @@ class _Step3ViewState extends State<Step3View> {
                           ),
                         ),
                         CupertinoSwitch(
-                            activeColor: TColor.primary,
+                            activeColor: TColor.kPrimaryColor,
                             value: isAppleHealth,
                             onChanged: (newVal) {
                               setState(() {
@@ -180,9 +180,9 @@ class _Step3ViewState extends State<Step3View> {
                           ),
                           CupertinoSegmentedControl(
                             groupValue: isMale,
-                            selectedColor: TColor.primary,
+                            selectedColor: TColor.kPrimaryColor,
                             unselectedColor: TColor.white,
-                            borderColor: TColor.primary,
+                            borderColor: TColor.kPrimaryColor,
                             children: const {
                               true: Text(" Male ",
                                   style: TextStyle(fontSize: 18)),
@@ -226,7 +226,7 @@ class _Step3ViewState extends State<Step3View> {
                     height: 12,
                     decoration: BoxDecoration(
                         color: 3 == pObj
-                            ? TColor.primary
+                            ? TColor.kPrimaryColor
                             : TColor.gray.withOpacity(0.7),
                         borderRadius: BorderRadius.circular(6)),
                   );

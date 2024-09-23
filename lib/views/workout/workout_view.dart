@@ -100,7 +100,7 @@ class _WorkoutViewState extends State<WorkoutView> {
                         Text(
                           wObj["title"],
                           style: TextStyle(
-                              color: TColor.primary,
+                              color: TColor.kPrimaryColor,
                               fontSize: 14,
                               fontWeight: FontWeight.w500),
                         ),

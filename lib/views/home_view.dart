@@ -83,7 +83,7 @@ class _HomeViewState extends State<HomeView> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0.1,
         leading: IconButton(
@@ -334,7 +334,7 @@ class _HomeViewState extends State<HomeView> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: TColor.primary,
+          selectedItemColor: TColor.kPrimaryColor,
           onTap: _onItemTapped,
           backgroundColor: Colors.transparent,
           type: BottomNavigationBarType.fixed,

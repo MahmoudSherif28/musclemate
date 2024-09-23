@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
 
-
 enum RoundButtonType { primary, primaryText }
 
 class RoundButton extends StatelessWidget {
@@ -16,22 +15,28 @@ class RoundButton extends StatelessWidget {
       required this.title,
       required this.onPressed,
       this.fontSize = 20,
-      this.fontWeight = FontWeight.w700 ,
+      this.fontWeight = FontWeight.w700,
       this.type = RoundButtonType.primary});
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: onPressed,
-      textColor: type == RoundButtonType.primary ? TColor.white :  TColor.primary,
-      color: type == RoundButtonType.primary ? TColor.primary : TColor.white,
+      textColor:
+          type == RoundButtonType.primary ? TColor.white : TColor.kPrimaryColor,
+      color:
+          type == RoundButtonType.primary ? TColor.kPrimaryColor : TColor.white,
       height: 50,
       minWidth: double.maxFinite,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
       child: Text(
         title,
         style: TextStyle(
-            color: type == RoundButtonType.primary ? TColor.white :  TColor.primary, fontSize: fontSize, fontWeight: fontWeight),
+            color: type == RoundButtonType.primary
+                ? TColor.white
+                : TColor.kPrimaryColor,
+            fontSize: fontSize,
+            fontWeight: fontWeight),
       ),
     );
   }

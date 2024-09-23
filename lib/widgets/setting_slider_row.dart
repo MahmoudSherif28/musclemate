@@ -25,11 +25,7 @@ class SettingSliderRow extends StatelessWidget {
               ),
             ],
           ),
-
-        
-
           Row(
-            
             children: [
               Text(
                 "1",
@@ -40,7 +36,7 @@ class SettingSliderRow extends StatelessWidget {
               ),
               Expanded(
                 child: Slider(
-                    activeColor: TColor.primary,
+                    activeColor: TColor.kPrimaryColor,
                     max: 100.0,
                     min: 1.0,
                     value: double.tryParse(tObj["value"]) ?? 1,

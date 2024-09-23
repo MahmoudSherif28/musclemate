@@ -97,7 +97,6 @@ class _MealPlanViewState extends State<MealPlanView> {
                     },
                   ),
                 ),
-                
               ],
             ),
           ),
@@ -136,8 +135,7 @@ class _MealPlanViewState extends State<MealPlanView> {
           ),
           Expanded(
             child: ListView.builder(
-                padding:
-                    const EdgeInsets.symmetric( horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 itemCount: planArr.length,
                 itemBuilder: (context, index) {
                   var wObj = planArr[index] as Map? ?? {};
@@ -174,7 +172,7 @@ class _MealPlanViewState extends State<MealPlanView> {
                               Text(
                                 wObj["title"],
                                 style: TextStyle(
-                                    color: TColor.primary,
+                                    color: TColor.kPrimaryColor,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500),
                               ),

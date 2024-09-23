@@ -23,7 +23,7 @@ class _RunningViewState extends State<RunningView> {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: TColor.primary,
+          backgroundColor: TColor.kPrimaryColor,
           centerTitle: true,
           elevation: 0,
           leading: IconButton(
@@ -46,7 +46,7 @@ class _RunningViewState extends State<RunningView> {
           children: [
             Container(
               height: 70,
-              color: TColor.primary,
+              color: TColor.kPrimaryColor,
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: media.width * 0.9,
@@ -114,37 +114,33 @@ class _RunningViewState extends State<RunningView> {
               ),
             ),
             Container(
-              width: media.width * 0.9,
-              height: media.height * 0.65,
-              decoration: BoxDecoration(
-                  color: TColor.white,
-                  borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10)),
-                  boxShadow: const [
-                    BoxShadow(
-                        color: Colors.black26,
-                        blurRadius: 2,
-                        offset: Offset(0, 1))
-                  ]),
-              child: Column(children: [
-                   if(selectTab == 0)
-                    RunningLengthView(height: media.height * 0.65),
-                    if(selectTab == 1)
-                    RunningSpeedView(height: media.height * 0.65),
-                  
-                  if(selectTab == 2)
-                    RunningTimerView(height: media.height * 0.65),
-
-                  if(selectTab == 3)
-                   RunningHeartView(height: media.height * 0.65),
-
-                  if(selectTab == 4)
-                   RunningDensityView(height: media.height * 0.65),
-                   
-
-              ],)
-            ),
+                width: media.width * 0.9,
+                height: media.height * 0.65,
+                decoration: BoxDecoration(
+                    color: TColor.white,
+                    borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 2,
+                          offset: Offset(0, 1))
+                    ]),
+                child: Column(
+                  children: [
+                    if (selectTab == 0)
+                      RunningLengthView(height: media.height * 0.65),
+                    if (selectTab == 1)
+                      RunningSpeedView(height: media.height * 0.65),
+                    if (selectTab == 2)
+                      RunningTimerView(height: media.height * 0.65),
+                    if (selectTab == 3)
+                      RunningHeartView(height: media.height * 0.65),
+                    if (selectTab == 4)
+                      RunningDensityView(height: media.height * 0.65),
+                  ],
+                )),
             Padding(
               padding: const EdgeInsets.only(top: 30),
               child: Row(
@@ -152,7 +148,7 @@ class _RunningViewState extends State<RunningView> {
                 children: [
                   InkWell(
                     onTap: () {
-                       Navigator.push(
+                      Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
@@ -174,15 +170,13 @@ class _RunningViewState extends State<RunningView> {
                     ),
                   ),
                   InkWell(
-                    onTap: () {
-                     
-                    },
+                    onTap: () {},
                     child: Container(
                       width: media.width * 0.5,
                       height: 40,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                          color: TColor.primary,
+                          color: TColor.kPrimaryColor,
                           borderRadius: BorderRadius.circular(20)),
                       child: Image.asset(
                         "assets/img/r_pause.png",

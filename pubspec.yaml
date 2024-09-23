@@ -48,6 +48,7 @@ dependencies:
   chat_gpt_sdk: 
   dash_chat_2: 
   flutter_gemini: 
+  lottie:
 
 dev_dependencies:
   flutter_launcher_icons: 

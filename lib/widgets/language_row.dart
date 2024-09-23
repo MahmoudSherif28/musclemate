@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musclemate/helpers/color_extension.dart';
 
-
 class LanguageRow extends StatelessWidget {
   final Map tObj;
   final VoidCallback onPressed;
@@ -24,17 +23,12 @@ class LanguageRow extends StatelessWidget {
             Text(
               tObj["name"],
               style: TextStyle(
-                  color: isActive ? TColor.primary : TColor.secondaryText,
+                  color: isActive ? TColor.kPrimaryColor : TColor.secondaryText,
                   fontSize: 18,
                   fontWeight: FontWeight.w700),
             ),
-
-            if(isActive)
-            Image.asset(
-              "assets/img/tick.png",
-              width: 30,
-              height: 30
-            )
+            if (isActive)
+              Image.asset("assets/img/tick.png", width: 30, height: 30)
           ],
         ),
       ),

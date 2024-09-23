@@ -35,7 +35,7 @@ class _ScheduleViewState extends State<ScheduleView> {
     MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: TColor.primary,
+        backgroundColor: TColor.kPrimaryColor,
         centerTitle: true,
         elevation: 0.1,
         leading: IconButton(
@@ -120,13 +120,11 @@ class _ScheduleViewState extends State<ScheduleView> {
               child: Stack(
                 children: [
                   CalendarCarousel(
-                    todayButtonColor: TColor.primary,
-                    todayBorderColor: TColor.primary,
-                    selectedDayButtonColor: TColor.primary,
-                    selectedDayBorderColor: TColor.primary,
-                    onDayPressed: (DateTime date, List events) {
-                      
-                    },
+                    todayButtonColor: TColor.kPrimaryColor,
+                    todayBorderColor: TColor.kPrimaryColor,
+                    selectedDayButtonColor: TColor.kPrimaryColor,
+                    selectedDayBorderColor: TColor.kPrimaryColor,
+                    onDayPressed: (DateTime date, List events) {},
                     onCalendarChanged: (date) {
                       setState(() {
                         targetDate = date;
@@ -141,18 +139,15 @@ class _ScheduleViewState extends State<ScheduleView> {
                         fontSize: 16,
                         fontWeight: FontWeight.w700),
                     weekDayFormat: WeekdayFormat.narrow,
-                    weekdayTextStyle:  TextStyle(
-                        color: TColor.gray,
-                        fontSize: 20),
+                    weekdayTextStyle:
+                        TextStyle(color: TColor.gray, fontSize: 20),
                     weekendTextStyle: TextStyle(
                         color: TColor.primaryText,
                         fontSize: 16,
                         fontWeight: FontWeight.w700),
-                   
                     thisMonthDayBorderColor: Colors.transparent,
                     showHeader: false,
                     customDayBuilder: (
-                      
                       bool isSelectable,
                       int index,
                       bool isSelectedDay,
@@ -191,17 +186,18 @@ class _ScheduleViewState extends State<ScheduleView> {
                       return null;
                     },
                     weekFormat: false,
-
                     height: 340.0,
                     selectedDateTime: nowTime,
                     targetDateTime: targetDate,
                     daysHaveCircularBorder: true,
                   ),
-
-                 const Padding(
-                   padding:  EdgeInsets.only(top: 33),
-                   child:  Divider(color:  Colors.black26, height: 1, ),
-                 )
+                  const Padding(
+                    padding: EdgeInsets.only(top: 33),
+                    child: Divider(
+                      color: Colors.black26,
+                      height: 1,
+                    ),
+                  )
                 ],
               ),
             ),
